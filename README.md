@@ -42,34 +42,34 @@ The dataset contains 45,211 customer records with 17 features.
 bank-term-deposit-prediction-machine-learning/
 │
 ├── data/
-│   └── bank-full.csv                 Raw data file
+│ └── bank-full.csv Raw data file
 │
 ├── scripts/
-│   ├── 01_load_data.ipynb            Load and inspect data
-│   ├── 02_clean_data.ipynb           Clean and prepare data
-│   ├── 03_analyze_data.ipynb         Exploratory data analysis
-│   ├── 04_visualize_data.ipynb       Create visualizations
-│   ├── 05_build_features.ipynb       Feature engineering
-│   ├── 06_train_model.ipynb          Train and compare models
-│   └── 07_evaluate_model.ipynb       Evaluate final model
+│ ├── 01_load_data.ipynb Load and inspect data
+│ ├── 02_clean_data.ipynb Clean and prepare data
+│ ├── 03_analyze_data.ipynb Exploratory data analysis
+│ ├── 04_visualize_data.ipynb Create visualizations
+│ ├── 05_build_features.ipynb Feature engineering
+│ ├── 06_train_model.ipynb Train and compare models
+│ └── 07_evaluate_model.ipynb Evaluate final model
 │
 ├── deployment/
-│   ├── best_model.pkl                Trained model
-│   ├── preprocessor.pkl              Data preprocessor
-│   ├── requirements.txt              API dependencies
-│   └── app.py                        Flask API
+│ ├── best_model.pkl Trained model
+│ ├── preprocessor.pkl Data preprocessor
+│ ├── requirements.txt API dependencies
+│ └── app.py Flask API
 │
 ├── outputs/
-│   ├── cleaned_data/                 Processed datasets
-│   ├── figures/                      All visualizations
-│   ├── models/                       Backup models
-│   └── reports/                      Analysis reports
+│ ├── cleaned_data/ Processed datasets
+│ ├── figures/ All visualizations
+│ ├── models/ Backup models
+│ └── reports/ Analysis reports
 │
 ├── src/
-│   └── config.py                     Configuration settings
+│ └── config.py Configuration settings
 │
-├── requirements.txt                  Main dependencies
-└── README.md                         Project documentation
+├── requirements.txt Main dependencies
+└── README.md Project documentation
 
 text
 
@@ -83,19 +83,15 @@ text
 
 **Insight:** The dataset is imbalanced - only 11.7% of customers subscribed.
 
----
-
 ### Categorical Features vs Subscription Rate
 
 ![Categorical Features](outputs/figure/categorical_features_target.png)
 
 **Key Insights:**
 - March campaigns: 52% subscription rate
-- Previous success: 64.7% subscription rate  
+- Previous success: 64.7% subscription rate
 - Students: 28.7% subscription rate
 - May campaigns: Only 6.7% subscription rate
-
----
 
 ### Numerical Features Distribution
 
@@ -106,8 +102,6 @@ text
 - Balance is heavily right-skewed
 - Most customers receive 1-2 campaign calls
 
----
-
 ### Box Plots: Subscribers vs Non-Subscribers
 
 ![Box Plots Comparison](outputs/figure/boxplots_comparison.png)
@@ -117,8 +111,6 @@ text
 - Subscribers have higher median balance
 - Too many campaign calls reduces subscription likelihood
 
----
-
 ### Correlation Heatmap
 
 ![Correlation Heatmap](outputs/figure/correlation_heatmap.png)
@@ -126,8 +118,6 @@ text
 **Key Insights:**
 - Duration has strongest correlation with subscription (0.405)
 - Campaign has negative correlation (-0.080)
-
----
 
 ### Model Comparison Chart
 
@@ -189,57 +179,69 @@ text
 - pip package manager
 
 ### Step 1: Navigate to Project Folder
-
-```bash
 cd bank-term-deposit-prediction-machine-learning
-Step 2: Install Dependencies
-bash
-pip install -r requirements.txt
-Step 3: Run the Notebooks in Order
-Open Jupyter Notebook or VS Code and run sequentially:
-
-scripts/01_load_data.ipynb
-
-scripts/02_clean_data.ipynb
-
-scripts/03_analyze_data.ipynb
-
-scripts/04_visualize_data.ipynb
-
-scripts/05_build_features.ipynb
-
-scripts/06_train_model.ipynb
-
-scripts/07_evaluate_model.ipynb
-
-How to Use the Flask API
-Step 1: Navigate to Deployment Folder
-bash
-cd deployment
-Step 2: Install API Dependencies
-bash
-pip install -r requirements.txt
-Step 3: Run the API
-bash
-python app.py
-You should see:
 
 text
+
+### Step 2: Install Dependencies
+pip install -r requirements.txt
+
+text
+
+### Step 3: Run the Notebooks in Order
+
+#### Open Jupyter Notebook or VS Code and run sequentially:
+
+- `scripts/01_load_data.ipynb`
+- `scripts/02_clean_data.ipynb`
+- `scripts/03_analyze_data.ipynb`
+- `scripts/04_visualize_data.ipynb`
+- `scripts/05_build_features.ipynb`
+- `scripts/06_train_model.ipynb`
+- `scripts/07_evaluate_model.ipynb`
+
+---
+
+## How to Use the Flask API
+
+#### Step 1: Navigate to Deployment Folder
+cd deployment
+
+text
+
+#### Step 2: Install API Dependencies
+pip install -r requirements.txt
+
+text
+
+#### Step 3: Run the API
+python app.py
+
+text
+
+**You should see:**
 Model and preprocessor loaded successfully
- * Running on http://127.0.0.1:5000
- * Running on http://192.168.x.x:5000
-Step 4: Test the API
-Test 1: Health Check
 
-Open your browser and go to: http://localhost:5000/health
+Running on http://127.0.0.1:5000
 
-Expected response:
+Running on http://192.168.x.x:5000
 
-json
+text
+
+#### Step 4: Test the API
+
+**Test 1: Health Check**
+
+#### Open your browser and go to: `http://localhost:5000/health`
+
+**Expected response:**
 {"model_loaded":true,"status":"healthy"}
-Test 2: Single Prediction Using Python
 
-python
+text
+
+**Test 2: Single Prediction Using Python**
+
+```python
 import requests
 
 url = "http://localhost:5000/predict"
@@ -267,7 +269,7 @@ response = requests.post(url, json=customer)
 print(response.json())
 Expected response:
 
-json
+text
 {
     "prediction": "SUBSCRIBE",
     "probability": 0.9181,
@@ -298,7 +300,7 @@ response = requests.post(url, json=batch_data)
 print(response.json())
 Test 4: Using PowerShell (Windows)
 
-powershell
+text
 $body = '{"age":35,"job":"management","marital":"married","education":"tertiary","default":"no","balance":2000,"housing":"no","loan":"no","contact":"cellular","day":15,"month":"mar","duration":300,"campaign":2,"pdays":-1,"previous":0,"poutcome":"unknown"}'
 
 Invoke-RestMethod -Uri "http://localhost:5000/predict" -Method POST -Body $body -ContentType "application/json"
@@ -335,12 +337,16 @@ API Development	Flask, Gunicorn
 Model Serialization	Joblib
 Environment	Python 3.11
 Results Summary
-Best Month	Subscription Rate
+Best Month by Subscription Rate
+
+Month	Subscription Rate
 March	52.0%
 September	27.4%
 October	20.3%
 May	6.7%
-Best Customer Segments	Subscription Rate
+Best Customer Segments by Subscription Rate
+
+Segment	Subscription Rate
 Previous success	64.7%
 Student job	28.7%
 No housing loan	16.7%
@@ -353,3 +359,10 @@ Features	Add economic indicators (interest rates, CPI)
 Models	Test neural networks, ensemble methods
 Deployment	Deploy to cloud (Render, AWS, GCP)
 Monitoring	Add model performance monitoring
+License
+This project is for educational and portfolio purposes.
+
+## Author
+GEORGE ONYANGO
+georgebabji1220@gmail.com
+whatsapp:+254111866769
