@@ -79,7 +79,7 @@ text
 
 ### Target Variable Distribution
 
-![Target Distribution](outputs/figures/target_distribution.png)
+![Target Distribution](outputs/figure/target_distribution.png)
 
 **Insight:** The dataset is imbalanced - only 11.7% of customers subscribed.
 
@@ -87,7 +87,7 @@ text
 
 ### Categorical Features vs Subscription Rate
 
-![Categorical Features](outputs/figures/categorical_features_target.png)
+![Categorical Features](outputs/figure/categorical_features_target.png)
 
 **Key Insights:**
 - March campaigns: 52% subscription rate
@@ -99,7 +99,7 @@ text
 
 ### Numerical Features Distribution
 
-![Numerical Distributions](outputs/figures/numerical_distributions.png)
+![Numerical Distributions](outputs/figure/numerical_distributions.png)
 
 **Key Insights:**
 - Age distribution is roughly normal
@@ -110,7 +110,7 @@ text
 
 ### Box Plots: Subscribers vs Non-Subscribers
 
-![Box Plots Comparison](outputs/figures/boxplots_comparison.png)
+![Box Plots Comparison](outputs/figure/boxplots_comparison.png)
 
 **Key Insights:**
 - Duration clearly separates subscribers from non-subscribers
@@ -121,7 +121,7 @@ text
 
 ### Correlation Heatmap
 
-![Correlation Heatmap](outputs/figures/correlation_heatmap.png)
+![Correlation Heatmap](outputs/figure/correlation_heatmap.png)
 
 **Key Insights:**
 - Duration has strongest correlation with subscription (0.405)
@@ -131,7 +131,7 @@ text
 
 ### Model Comparison Chart
 
-![Model Comparison](outputs/figures/model_comparison.png)
+![Model Comparison](outputs/figure/model_comparison.png)
 
 **Key Insights:**
 - Random Forest (Tuned) achieved highest recall (96.5%)
