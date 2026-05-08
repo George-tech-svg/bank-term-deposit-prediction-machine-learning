@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------------------------------------------------------------------------
+BANK MARKETING DATASET - DATA QUALITY REPORT
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+Dataset shape: 45211 rows, 17 columns
+
+COLUMN INFORMATION:
+----------------------------------------
+  age: int64 (unique: 77)
+  job: str (unique: 12)
+  marital: str (unique: 3)
+  education: str (unique: 4)
+  default: str (unique: 2)
+  balance: int64 (unique: 7168)
+  housing: str (unique: 2)
+  loan: str (unique: 2)
+  contact: str (unique: 3)
+  day: int64 (unique: 31)
+  month: str (unique: 12)
+  duration: int64 (unique: 1573)
+  campaign: int64 (unique: 48)
+  pdays: int64 (unique: 559)
+  previous: int64 (unique: 41)
+  poutcome: str (unique: 4)
+  y: str (unique: 2)
+
+MISSING VALUES SUMMARY:
+----------------------------------------
+  No missing values found in the dataset.
+
+DUPLICATE ROWS: 0
+
+TARGET VARIABLE DISTRIBUTION:
+----------------------------------------
+  no: 39922 (88.30%)
+  yes: 5289 (11.70%)

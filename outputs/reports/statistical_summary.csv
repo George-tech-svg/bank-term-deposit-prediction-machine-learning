@@ -1,0 +1,7 @@
+Feature,Mean_No,Mean_Yes,Median_No,Median_Yes,Difference_Percent
+age,40.84,41.67,39.0,38.0,2.04
+balance,1303.71,1804.27,417.0,733.0,38.39
+duration,221.18,537.29,164.0,426.0,142.92
+campaign,2.85,2.14,2.0,2.0,-24.78
+pdays,36.42,68.7,-1.0,-1.0,88.63
+previous,0.5,1.17,0.0,0.0,133.07

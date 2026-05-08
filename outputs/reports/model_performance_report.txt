@@ -1,0 +1,14 @@
+----------------------------------------------------------------------
+MODEL PERFORMANCE REPORT
+----------------------------------------------------------------------
+
+Test Recall:    0.9650 (96.5%)
+Test Precision: 0.2444 (24.4%)
+Test Accuracy:  0.6469 (64.7%)
+Test F1-Score:  0.3901
+
+CONFUSION MATRIX:
+  True Negatives:  4829
+  False Positives: 3156
+  False Negatives: 37
+  True Positives:  1021

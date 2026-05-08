@@ -1,0 +1,23 @@
+======================================================================
+VISUALIZATIONS SUMMARY REPORT
+======================================================================
+
+FIGURES GENERATED:
+----------------------------------------
+1. target_distribution.png - Target variable distribution
+2. categorical_features_target.png - Categorical features vs subscription rate
+3. numerical_distributions.png - Distribution of numerical features
+4. boxplots_comparison.png - Box plots comparing subscribers vs non-subscribers
+5. correlation_heatmap.png - Correlation matrix of numerical features
+
+KEY FINDINGS FROM VISUALIZATIONS:
+----------------------------------------
+- Dataset is imbalanced: 88.3% no, 11.7% yes
+- March campaigns have 52.0% success rate, May only 6.7%
+- Previous success leads to 64.7% subscription rate
+- Students (28.7%) and retired (19.7%) are best targets
+- Customers without housing loans are 2.2x more likely to subscribe
+- Duration is the strongest predictor (correlation: 0.405)
+- Too many campaign calls reduces subscription likelihood
+- Single customers (15.0%) more likely than married (10.1%)
+- Tertiary education (15.0%) outperforms primary (8.6%)
